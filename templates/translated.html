@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="col-md-12 border-bottom border-right main" id="article-contents">
+	<section id="general" class="container">
+	<h3>原文：
+		<a href="{{ result.url }}">{{ result.title }}
+		{% if result.author %}</a>
+		<small class="blockquote text-right">
+		  <p class="mb-0">by {{ result.author }}</p>
+		  <!-- <footer class="blockquote-footer">文章の<cite title="引用元の名前">引用元</cite>が明示できます。</footer> -->
+		</small><br>
+		<!-- <small class="text-right">by {{ result.author }}</small> -->
+		{% endif %}
+	</h3>
+	<br>
+	<br>
+	{{ result.body | safe }}
+	</section>
+</div>
+
+{% endblock main %}

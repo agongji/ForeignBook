@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="section container">
+<h2> New York Times BestSeller </h2>
+<br>
+	<h3>combined print & Ebook Hardcover-Fiction ranking</h3>
+	{% for book in books_list %}
+	<div class="container">
+		<h4>{{ book.rank }} 位: {{ book.title }}<small> by {{ book.author }}</small></h4>
+		<img src="{{ book.book_image }}">
+		<p>{{ book.description }}</p>
+	</div>
+	{% endfor %}
+
+	<h3>combined print & Ebook Fiction ranking</h3>
+	<p>
+		;fljslkfj;aslfj;alsfj;a
+	</p>
+
+</div>
+{% endblock main %}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gutenberg DashBoard</title>
+</head>
+<body>
+{% include 'includes/_navbar_for_admin.html' %}
+{% include 'includes/_messages.html' %}
+<div class="container">
+	<h1>DashBoard <small>Welcome {{session.username}}</small></h1>
+	<hr>
+	<h3>Books <a class="btn btn-success" href="/add_book"> Add Book</a></h3>
+	<p>database table name: books; id INTEGER PRIMARY KEY, url, title, author, body</p>
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th>
+			<th>URL</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	{% for book in books %}
+		<tr>
+			<td>{{ book.id }}</td>
+			<td>{{ book.url }}</td>
+			<td>{{ book.title }}</td>
+			<td>{{ book.author }}</td>
+			<td><a href="edit_book/{{ book.id }}" class="btn btn-secondary float-right">Edit</a></td>
+			<td>
+			<form action="{{ url_for('delete_book', id=book.id) }}" method="post">
+				<input type="hidden" name="_method" value="DELETE">
+				<input type="submit" value="Delete" class="btn btn-danger">
+			</form>
+			</td>
+			<td><a href="translated/{{ book.id }}" class="btn btn-success float-right">page</a></td>
+		</tr>
+	{% endfor %}
+	</table>
+	
+	<hr>
+	
+	<!-- <h3>Practices <a class="btn btn-success" href="/add_practice"> Add Practice</a></h3>
+	<p>database name: practices; id INTEGER PRIMARY KEY, chapter, question, choice1, choice2, choice3, choice4, answer</p>
+	<table class="table table-striped">
+		<tr>
+			<th>ID</th>
+			<th>Chapter</th>
+			<th>Question</th>
+			<th></th>
+			<th></th>
+		</tr>
+	{% for practice in practices %}
+		<tr>
+			<td>{{ practice.id }}</td>
+			<td>{{ practice.chapter }}章</td>
+			<td>{{ practice.question | safe }}</td>
+			<td><a href="edit_practice/{{ practice.id }}" class="btn btn-default pull-right">Edit</a></td>
+			<td>
+			<form action="{{ url_for('delete_practice', id=practice.id) }}" method="post">
+				<input type="hidden" name="_method" value="DELETE">
+				<input type="submit" value="Delete" class="btn btn-danger">
+			</form>
+			</td>
+		</tr>
+	{% endfor %}
+	</table> -->
+</div>
+</body>
+</html>

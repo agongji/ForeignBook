@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+/* 共通部分
+-----------------*/
+/*html {
+	font-size: 100%;
+}
+
+body {
+	font-family: "Yu Gothic Medium";
+	line-height: 1.7;
+	color: #432;
+}*/
+
+/*h2 {
+	margin: 30px;
+}*/
+
+h3 {
+	border-bottom: 1px solid #a2a9b1;
+}
+
+
+p {
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* HEADER部分
+--------------------*/
+.logo {
+	width: 100px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+#main-logo {
+	text-align: right;
+	margin: 0px;
+
+}
+
+
+#home {
+	background-image: url(./image/sample.jpg);
+	height: 60px;
+	margin-bottom: 40px;
+}
+
+#home .page-title {
+	text-align: left;
+	font-size: 30px;
+	/*color: #668ad8;*/
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-left: 50px;
+}
+
+p.card-text {
+	font-size: 16px;
+}
+
+
+
+
+/*item1とitem2とitem3の配置*/
+.container {
+	background: #ffffff; /*white*/
+	color: #475825; /*blue*/
+	
+	margin: 10px;
+	margin-top: 5px;
+	border-style: hidden;
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+
+.container2 {
+	width: 90%;
+	background-color: #fff;
+	margin: 5px;
+	margin-bottom: 40px;
+	display: flex;
+}
+
+.item1 {
+
+}
+
+.item2 {
+
+}
+
+
+.side-navi {
+	margin: 10px;
+	margin-top: 30px;
+}
+
+h3.sub-title{
+	padding-left: 15px;
+	border-bottom: 2px ridge;
+}
+
+.linuc-section {
+	width: 27%;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	padding-left: 10px;
+	border-bottom: 5px groove;
+	border-right: 5px groove;
+}
+
+
+.sub-menu {
+  color: #668ad8;/*文字色*/
+  border: dashed 2px #668ad8;/*破線 太さ 色*/
+  background: #f1f8ff; /*背景色*/
+  padding: 0.5em 0.5em 0.5em 2em;
+}
+
+
+/*a.button {
+	font-family: 'philosopher', serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	display:block;
+	width:40%;
+	margin: auto;
+	margin-top: 10px;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	border: 2px solid;
+	border-style: outset;
+	border-color:#aaaaaa #668ad8 #668ad8 #aaaaaa;
+	background:#fff;
+
+	background-color: #fff;
+  	border: 2px solid #333;
+  	color: #333;
+  	line-height: 50px;
+
+
+}
+
+a.button:hover{
+	border-style: dashed;
+}*/
+
+
+footer > div.wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+/*p#site-policy {
+	width: 25%;
+}
+
+p#about-me {
+	width: 25%;
+}
+
+p#copyright {
+	width: 50%;
+}
+
+div.wrapper > p {
+	text-align: center;
+}*/
+
+
+/*タブ切り替え全体のスタイル*/
+/*.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0 auto;}*/
+
+/*タブのスタイル*/
+/*.tab_item {
+  width: calc(100%/2);
+  height: 50px;
+  border-bottom: 3px solid #fff;
+  background-color: #d9d9d9;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}*/
+
+/*.tab_item:hover {
+  opacity: 0.75;
+}*/
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+/*.tab-content {
+  display: none;
+  padding: 20px 20px 0;
+  clear: both;
+  overflow: hidden;
+}*/
+
+
+/*選択されているタブのコンテンツのみを表示*/
+/*#linuc101:checked ~ #linuc101-content,
+#linuc102:checked ~ #linuc102-content {
+  display: block;
+}*/
+
+/*選択されているタブのスタイルを変える*/
+/*.tabs input:checked + .tab_item {
+  background-color: #fff;
+  color: #432;
+}*/
+
+
+
+
+
+
+
+/*モバイル版
+------------------------------------------*/
+@media (max-width: 600px) {
+	.page-title {
+		font-size: 2.5rem;
+	}
+
+	/* HEADER */
+
+
+
+	/* HOME */
+	.linuc-contents {
+		margin-top: 20%;
+		flex-direction: column;
+	}
+	main, 
+	aside {
+		width: 100%;
+	}
+}

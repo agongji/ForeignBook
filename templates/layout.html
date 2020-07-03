@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Foreign Book Library 唐本翻訳プロジェクト</title>
+<meta name="description" content="著作権の切れた海外の書籍を翻訳するサイト">
+<meta name="keywords" content="Gutenberg, New York Times, Book, 本">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- xterm.css -->
+<link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+
+</head>
+
+<body>
+
+    <div id="home" class="container">
+    {% include 'includes/_navbar.html' %}
+    {% include 'includes/_messages.html' %}
+    <!-- ヘッダ -->
+    <!-- ヘッダ本体 -->
+        <!-- <div id="main-header" class="row page-header">
+            <h1 id="main-logo"><a href="/"><img class="logo" src="/static/image/lpic_logo.jpg" alt="LinuC PRACTICE ASSOCIATION"></a></h1>
+        </div> -->
+    <!-- タイトル -->
+        
+    {% block main %}{% endblock main %}
+
+        <div id="main-footer" class="row">
+            <p class="col-md-2" id="site-policy"><a href="">サイトポリシー</a></p>
+            <p class="col-md-2" id="about-me"><a href="">ABOUT THIS PROJECT</a></p>
+            <p class="col-md-8" id= "copyright">Copyright ⓒ 2020-25 ForeignBook Park all rights reserved.</p>
+        </div>
+    </div>
+<!-- xterm.js -->
+<!-- <script src="/node_modules/xterm/lib/xterm.js"></script> -->
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<!-- npm? -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<!-- bootstrap -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- mathjax -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+</body>
+</html>

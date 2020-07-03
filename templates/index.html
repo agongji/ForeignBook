@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+
+<div class="col-md-12 border-bottom border-right main" id="main-contents"> 
+
+<div class="section container">
+	<h2>【実験】いろんな書籍をDeepLを使って翻訳してみた【公開】</h2>
+	<button type="button" class="btn btn-outline-primary btn-lg">Top100 翻訳ページへ</button>
+	<p>
+	    ForeignBook Parkへようこそ。<br> 
+	    ここは海外のいろんな本を紹介するサイトです。
+	</p>
+
+	<h3>DeepLとはなにか</h3>
+
+	<div class="card" style="width: 18rem;">
+	  <img class="card-img-top" src="/static/image/deepl.png" alt="カードの画像">
+	  <div class="card-body">
+	    <h5 class="card-title">DeepL翻訳</h5>
+	    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
+	    <a href="https://www.deepl.com/translator" class="btn btn-outline-primary">DeepLのサイトへ</a>
+	  </div>
+	</div><br>
+	<p>
+	    2020年の頭に突如インターネットに出現した超ド級の翻訳マシーン。なにがすごいって、一流の翻訳者が手がけたかのような、その自然な訳語。とても機械が訳しているとは思えない。これまでのオンライン翻訳ツールのトップ、google translate のクオリティを余裕で凌駕する。
+	</p>
+	<br>
+
+	<h3>ひとまずパブリックドメインの書籍を翻訳してみることにした</h3>
+	<p>
+	    パブリックドメインというのは、著作権が特定の個人には帰属せず、公共のものであるという意味である。日本語のパブリックドメインの書籍は、<a href="https://www.aozora.gr.jp/">青空文庫</a>というサイトに多数掲載されているが、英語圏では、Gutenberg Projectというところに掲載されている。
+	</p>
+	<div class="card" style="width: 18rem;">
+	  <img class="card-img-top" src="..." alt="カードの画像">
+	  <div class="card-body">
+	    <h5 class="card-title">Gutenberg Project</h5>
+	    <p class="card-text">以下のテキストを追加のコンテンツへの自然な導入としてサポート。 カードのコンテンツ カードのコンテンツ</p>
+	    <a href="https://www.gutenberg.org/" class="btn btn-outline-primary">Gutenberg Projectのサイトへ</a>
+	  </div>
+	</div>
+	<br>
+	<p>
+	    文学作品が多いが、アメリカの独立宣言の起草文などもある。<br>
+	    そういうわけでここからから多数の英語書籍を引っ張ってきて、DeepLに通してみることにした。
+	</p>
+
+	<h3>Top 100 書籍を一挙に翻訳</h3>
+	<p>
+		グーテンベルク内で読まれているTOP100の書籍をまとめてDeepLにかけて日本語に変換した後、人力によるチェックを行い、より自然な日本語になるようにこころがけた。
+	</p>
+	<button type="button" class="btn btn-outline-primary btn-lg">Top100 翻訳ページへ</button>
+	<a href="/gutenberg" class="btn-primary btn-lg pull-right">Top100 翻訳ページへ</a>
+
+</div>
+
+</div>
+{% endblock main %}

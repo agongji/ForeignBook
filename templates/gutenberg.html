@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="row">
+    <h1 class="page-title"><a href="/">グーテンベルグ翻訳プロジェクト TOP 100 作品</a></h1>
+</div>
+
+<div class="col-md-12 main" id="main-contents"> 
+
+    <div class="row">
+      <div class="col-sm-12">
+      {% for book in books %}
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><a href="/translated/{{ book.id }}">{{ book.title }}</a></h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-outline-primary">読む</a>
+          </div>
+        </div>
+       {% endfor %}
+      </div>
+    </div>
+
+    <div class="media">
+      <a href="#" class="mr-3">
+        <img src="..." alt="メディアの画像">
+      </a>
+      <div class="media-body">
+        <h5 class="mt-0">メディアのヘッダ</h5>
+        メディアのコンテンツ...
+      </div><!-- /.media-body -->
+    </div><!-- /.media -->
+
+</div>
+{% endblock main %}

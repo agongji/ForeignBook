@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Book</title>
+</head>
+<body>
+{% include 'includes/_navbar_for_admin.html' %}
+{% include 'includes/_messages.html' %}
+<div class="container">
+  <h2>Add Book</h2>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+
+  <div class="form-group">
+  {{ render_field(form.body, class_="form-control", id="editor") }}
+  </div>
+
+  <p><input class="btn btn-primary" type="submit" value="Submit"></p>
+
+  </form>
+</div>
+  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/18.0.0/classic/ckeditor.js"></script> -->
+  <script src="/static/ckeditor5-build-classic/ckeditor.js"></script>
+  <!-- <script src="{{ url_for('static', filename='node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js')}}"></script> -->
+  <script type="module">
+    // import CodeBlock from '/static/ckeditor5-code-block/src/codeblock';
+    // CKEDITOR.replace('editor')
+
+    ClassicEditor
+      .create( document.querySelector( '#editor' ) )
+      .then( editor => {
+          console.log( editor );
+      } )
+      .catch( error => {
+          console.error( error );
+      } );
+  </script>
+</body>
+</html>
